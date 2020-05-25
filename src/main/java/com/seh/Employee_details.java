@@ -47,15 +47,15 @@ public class Employee_details extends HttpServlet {
 			String password="root";
 			con =	DriverManager.getConnection(db_URL,username,password);
 
-			PreparedStatement ps=con.prepareStatement("insert into register_emp values(?,?,?,?,?)"); 
-			ps.setString(1,firstname); ps.setString(2,lastname); ps.setString(3,emailid); ps.setString(4,salary);ps.setString(5,phoneno);
+			PreparedStatement ps=con.prepareStatement("insert into register_emp (empID,firstname,lastname,emailid,salary,phoneno) values(null,?,?,?,?,?)"); 
+			ps.setString(1,firstname); ps.setString(2,lastname); ps.setString(3,emailid); ps.setInt(4,Integer.parseInt(salary));ps.setLong(5,Long.parseLong(phoneno));
 			ps.executeUpdate();
      	}
 		catch(Exception e)
 		{
 			
 		}
-		
+		request.getRequestDispatcher("/displayEmployeeDetails.jsp").forward(request, response);
 	}
 		
 

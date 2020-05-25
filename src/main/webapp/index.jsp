@@ -18,7 +18,7 @@ table, th, td {
 <label for="FirstName">First Name</label>
 </td>
 <td>
-<input type="text" name="firstName"/>
+<input type="text" name="firstName" required/>
 </td>
 </tr>
 <tr>
@@ -26,7 +26,7 @@ table, th, td {
 <label for="lastName">Last Name</label>
 </td>
 <td>
-<input type="text" name="lastname"/>
+<input type="text" name="lastname" required/>
 </td>
 </tr>
 <tr>
@@ -34,7 +34,9 @@ table, th, td {
 <label for="emailid">Email ID</label>
 </td>
 <td>
-<input type="text" name="emailid"/>
+<input type="email" name="emailid"
+       pattern=".+@gmail.com" size="30" required>
+<!--  <input type="text" name="emailid"/>-->
 </td>
 </tr>
 <tr>
@@ -42,7 +44,7 @@ table, th, td {
 <label for="salary">Salary</label>
 </td>
 <td>
-<input type="text" name="salary"/>
+<input type="text" name="salary" required/>
 </td>
 </tr>
 <tr>
@@ -50,7 +52,9 @@ table, th, td {
 <label for="phonenumber">Phone Number</label>
 </td>
 <td>
-<input type="text" name="phonenumber"/>
+<input type="text" name="phonenumber" pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9">
+<!--  <input type="text" name="phonenumber" required/>-->
 </td>
 </tr>
 <tr>
@@ -61,5 +65,6 @@ table, th, td {
 </table>
 
 </form>
+<a href="displayEmployeeDetails.jsp">Display Employees</a>
 </body>
 </html>
