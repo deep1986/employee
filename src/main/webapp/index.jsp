@@ -18,7 +18,7 @@ table, th, td {
 <label for="FirstName">First Name</label>
 </td>
 <td>
-<input type="text" name="firstName" required/>
+<input type="text" name="firstname" required/>
 </td>
 </tr>
 <tr>

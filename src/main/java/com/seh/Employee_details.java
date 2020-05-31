@@ -28,7 +28,7 @@ public class Employee_details extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String firstname=request.getParameter("firstName");
+		String firstname=request.getParameter("firstname");
 		System.out.println(firstname);
 		String lastname=request.getParameter("lastname");
 		System.out.println(lastname);
